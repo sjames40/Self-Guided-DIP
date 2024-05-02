@@ -34,17 +34,29 @@ def make_data_list(file_path,file_array):
         file_data.append(data_from_file)
     return file_data
 
+def make_vdrs_mask(N1,N2,nlines,init_lines,seed=0):
+    mask_vdrs=np.zeros((N1,N2),dtype='bool')
+    low1=(N2-init_lines)//2
+    low2=(N2+init_lines)//2
+    mask_vdrs[:,low1:low2]=True
+    nlinesout=(nlines-init_lines)//2
+    rng = np.random.default_rng(seed)
+    t1 = rng.choice(low1-1, size=nlinesout, replace=False)
+    t2 = rng.choice(np.arange(low2+1, N2), size=nlinesout, replace=False)
+    mask_vdrs[:,t1]=True; mask_vdrs[:,t2]=True
+    return mask_vdrs
+
 Kspace_data_name = '/mnt/DataA/NEW_KSPACE'
 kspace_array = os.listdir(Kspace_data_name)
 kspace_array = sorted(kspace_array)
 
 kspace_data = []
 
+number =0
 
 
-
-index = 1074+number                
-kspace_file = kspace_array[j]
+index = 331+number                
+kspace_file = kspace_array[index]
 kspace_data_from_file = np.load(os.path.join(Kspace_data_name,kspace_file),'r')
 kspace_data.append(kspace_data_from_file)
 
@@ -71,7 +83,7 @@ class nyumultidataset(Dataset): # model data loader
         k_r = A_temp['k_r']/ 32767.0
         k_i = A_temp['k_i']/ 32767.0 
         ncoil, nx, ny = s_r.shape
-        mask_in = self.mask_path[index]
+        mask_in = make_vdrs_mask(nx,ny,np.int(ny*0.25),np.int(ny*0.08))
         k_np = np.stack((k_r, k_i), axis=0)
         s_np = np.stack((s_r[:, nx // 2 - 160:nx // 2 + 160, ny // 2 - 160:ny // 2 + 160],
                          s_i[:, nx // 2 - 160:nx // 2 + 160, ny // 2 - 160:ny // 2 + 160]), axis=0)
