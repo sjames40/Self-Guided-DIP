@@ -23,14 +23,10 @@ Our approach introduces a **Self-Guidance** mechanism that utilizes the model's 
 ```text
 📦 Self-Guided-DIP
  ┣ 📂 models             # Core model architectures (Baseline & Proposed)
- ┃ ┣ 📜 baseline_pai.py
- ┃ ┣ 📜 baseline_pat.py
- ┃ ┣ 📜 sgld.py          # Self-Guided Loss dynamics
- ┃ ┗ 📜 vanilla_dip.py
  ┣ 📂 unet               # UNet implementation details
  ┣ 📂 utils              # Utility functions (Dataloaders, Metrics, Visualization)
- ┣ 📂 two_channel_data   # (Place your dataset files here)
- ┣ 📜 self_guided_DIP.ipynb  # Main entry point: Jupyter Notebook for training/testing
+ ┣ 📂 data               # (Place your dataset files here)
+ ┣ 📜 self_guided_DIP_demo.ipynb  # Main entry point: Jupyter Notebook for training/testing
  ┗ 📜 requirements.txt   # Python dependencies
 ```
 
