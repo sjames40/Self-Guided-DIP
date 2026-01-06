@@ -71,7 +71,7 @@ The core logic and experiments are contained in the Jupyter Notebook.
     ```bash
     jupyter notebook
     ```
-2.  Open **`self_guided_DIP.ipynb`**.
+2.  Open **`self_guided_DIP_demo.ipynb`**.
 3.  Run the cells sequentially to initialize the model, load data, and perform restoration.
 
 ## 📝 Citation
