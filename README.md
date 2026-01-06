@@ -1,58 +1,80 @@
-# Self-Guided-DIP
+# Analysis of Deep Image Prior and Exploiting Self-Guidance for Image Reconstruction
 
-## Overview
-This repository implements the **Self-Guided Deep Image Prior (DIP)** technique, which enables effective unsupervised learning for image restoration tasks. The approach leverages the inherent structure of convolutional neural networks (CNNs) to solve inverse problems in imaging.
+[![arXiv](https://img.shields.io/badge/arXiv-2402.04097-b31b1b.svg)](https://arxiv.org/abs/2402.04097)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 
-## Repo structure
+> **Official PyTorch Implementation** for the paper "Analysis of Deep Image Prior and Exploiting Self-Guidance for Image Reconstruction" (IEEE TCI 2025).
+
+## 📖 Overview
+
+This repository implements the **Self-Guided Deep Image Prior (DIP)** technique. While standard DIP leverages the inductive bias of Convolutional Neural Networks (CNNs) for unsupervised image restoration, it often requires careful early stopping to avoid overfitting to noise.
+
+Our approach introduces a **Self-Guidance** mechanism that utilizes the model's own predictions during training to regularize the optimization process. This enables robust image restoration (including denoising, inpainting, and MRI reconstruction) without the need for ground-truth supervision.
+
+## ✨ Features
+
+- **Self-Guided DIP**: A novel regularization strategy to prevent overfitting in DIP.
+- **Versatile Architectures**: Implementations of various backbones including standard UNet and custom Deep/Shallow variants.
+- **Unsupervised Learning**: Perform high-quality image restoration without external training datasets.
+
+## 📂 Repository Structure
+
+```text
+📦 Self-Guided-DIP
+ ┣ 📂 models             # Core model architectures (Baseline & Proposed)
+ ┃ ┣ 📜 baseline_pai.py
+ ┃ ┣ 📜 baseline_pat.py
+ ┃ ┣ 📜 sgld.py          # Self-Guided Loss dynamics
+ ┃ ┗ 📜 vanilla_dip.py
+ ┣ 📂 unet               # UNet implementation details
+ ┣ 📂 utils              # Utility functions (Dataloaders, Metrics, Visualization)
+ ┣ 📂 two_channel_data   # (Place your dataset files here)
+ ┣ 📜 self_guided_DIP.ipynb  # Main entry point: Jupyter Notebook for training/testing
+ ┗ 📜 requirements.txt   # Python dependencies
 ```
-📦
-├─ models
-│  ├─ baseline_pai.py
-│  ├─ baseline_pat.py
-│  ├─ sgld.py
-│  ├─ vanilla_decoder.py
-│  └─ vanilla_dip.py
-├─ unet
-├─ util
-│  ├─ baboon
-│  ├─ barbara
-│  ├─ lena
-│  └─ pepper
-├─ utils
-│  ├─ baboon
-│  ├─ barbara
-│  ├─ lena
-│  └─ pepper
-├─ two_channel_data....
-└─ self_guided_DIP.ipynb
-```
-## Features
-- **Self-Guided DIP**: Apply self-guidance during DIP to improve restoration quality.
-- **Model Implementations**: Includes model architectures like UNet.
-- **Image Restoration**: Enhance image quality without supervision.
 
-## Setup
-1. Clone the repository:
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/sjames40/Self-Guided-DIP.git
+cd Self-Guided-DIP
 ```
 
-2 Install the required dependencies:
+### 2. Environment Setup
+We recommend using [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to manage dependencies.
+
 ```bash
-conda create --name self-guided-dip
+# Create a new conda environment
+conda create --name self-guided-dip python=3.9
 conda activate self-guided-dip
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-3 Usage Download the dataset from Dropbox: Data avaliable on **https://www.dropbox.com/scl/fi/801dxovhbkp2bkl2krz5x/NEW_KSPACE.zip?rlkey=4u3b32f6c4pfujsv3kp7z5bdk&st=hwe9thrv&dl=0**
-Open and run the self_guided_DIP.ipynb Jupyter notebook to train and evaluate the model on image restoration tasks.
-Directory Structure
-models/: Contains model architecture code.
-unet/: Implementation of the UNet model.
-utils/: Utility functions for the project.
+### 3. Data Preparation
+To reproduce the results, please download the specific k-space datasets used in our experiments.
 
+1.  **Download the Dataset**:  
+    [**Click here to download (NEW_KSPACE.zip)**](https://www.dropbox.com/scl/fi/801dxovhbkp2bkl2krz5x/NEW_KSPACE.zip?rlkey=4u3b32f6c4pfujsv3kp7z5bdk&st=hwe9thrv&dl=0) *(hosted on Dropbox)*
 
-## Citation
+2.  **Setup**:  
+    Unzip the file and place the contents into the project directory (e.g., inside a folder named `two_channel_data` or as specified in the notebook).
+
+## 🏃 Usage
+
+The core logic and experiments are contained in the Jupyter Notebook.
+
+1.  Launch Jupyter Notebook:
+    ```bash
+    jupyter notebook
+    ```
+2.  Open **`self_guided_DIP.ipynb`**.
+3.  Run the cells sequentially to initialize the model, load data, and perform restoration.
+
+## 📝 Citation
 
 If you find this code useful for your research, please cite our paper:
 
@@ -68,6 +90,7 @@ If you find this code useful for your research, please cite our paper:
   volume    = {11},
   pages     = {435--451},
   year      = {2025},
-  url       = {[https://doi.org/10.1109/TCI.2025.3540706](https://doi.org/10.1109/TCI.2025.3540706)},
+  url       = {https://doi.org/10.1109/TCI.2025.3540706},
   doi       = {10.1109/TCI.2025.3540706}
 }
+```
