@@ -50,3 +50,24 @@ Directory Structure
 models/: Contains model architecture code.
 unet/: Implementation of the UNet model.
 utils/: Utility functions for the project.
+
+
+## Citation
+
+If you find this code useful for your research, please cite our paper:
+
+```bibtex
+@article{DBLP:journals/tci/LiangBQWR25,
+  author    = {Shijun Liang and
+               Evan Bell and
+               Qing Qu and
+               Rongrong Wang and
+               Saiprasad Ravishankar},
+  title     = {Analysis of Deep Image Prior and Exploiting Self-Guidance for Image Reconstruction},
+  journal   = {{IEEE} Trans. Computational Imaging},
+  volume    = {11},
+  pages     = {435--451},
+  year      = {2025},
+  url       = {[https://doi.org/10.1109/TCI.2025.3540706](https://doi.org/10.1109/TCI.2025.3540706)},
+  doi       = {10.1109/TCI.2025.3540706}
+}
