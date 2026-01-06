@@ -57,7 +57,7 @@ To reproduce the results, please download the specific k-space datasets used in 
     [**Click here to download (NEW_KSPACE.zip)**](https://www.dropbox.com/scl/fi/801dxovhbkp2bkl2krz5x/NEW_KSPACE.zip?rlkey=4u3b32f6c4pfujsv3kp7z5bdk&st=hwe9thrv&dl=0) *(hosted on Dropbox)*
 
 2.  **Setup**:  
-    Unzip the file and place the contents into the project directory (e.g., inside a folder named `two_channel_data` or as specified in the notebook).
+    Unzip the file and place the contents into the project directory (e.g., inside a folder named `data` or as specified in the notebook).
 
 ## 🏃 Usage
 
