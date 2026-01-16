@@ -54,8 +54,8 @@ pip install -r requirements.txt
 To reproduce the results, please download the specific k-space datasets used in our experiments.
 
 1.  **Dataset**:  
-    [**fastMRI Dataset website**](https://fastmri.med.nyu.edu/)
-    [**Stanford 2D FSE website**](http://mridata.org/list?project=Stanford%202D%20FSE)
+    - [**fastMRI Dataset website**](https://fastmri.med.nyu.edu/)
+    - [**Stanford 2D FSE website**](http://mridata.org/list?project=Stanford%202D%20FSE)
 
 3.  **Setup**:  
     Unzip the file and place the contents into the project directory (e.g., inside a folder named `data` or as specified in the notebook).
