@@ -59,7 +59,13 @@ To reproduce the results, please download the specific k-space datasets used in 
     - [**Stanford 2D FSE website**](http://mridata.org/list?project=Stanford%202D%20FSE)(or download our copy via [**Google Drive**](https://drive.google.com/drive/folders/1CEI3SH2Amw1wRlQJygeWj1r1TI4jAOjm?usp=sharing))
 
 3.  **Setup**:  
-    Download the fastMRI dataset and place the contents into the project directory (e.g., inside a folder named `data` or as specified in the notebook).
+    We **recommend** downloading the **fastMRI dataset** first, as it is the primary dataset used to generate the results in `self_guided_DIP_demo.ipynb`. 
+    
+    **Download Instructions:**
+    * **For fastMRI**: Please visit the official website to obtain the license/agreement and then download the data.
+    * **For Stanford 2D FSE**: The **full dataset** is available on the official website. We also provide a **partial dataset** (subset) via [**Google Drive**](https://drive.google.com/drive/folders/1CEI3SH2Amw1wRlQJygeWj1r1TI4jAOjm?usp=sharing) for quick testing.
+    
+    Once downloaded, unzip the files and place them into the project directory (e.g., inside a folder named `data` or as specified in the notebook).
 
 ## 🏃 Usage
 
