@@ -91,3 +91,11 @@ If you find this code useful for your research, please cite our paper:
   doi       = {10.1109/TCI.2025.3540706}
 }
 ```
+
+## 📬 Correspondence
+
+For questions regarding the paper or code, please contact:
+
+* **Shijun Liang**: `liangs16@msu.edu`
+* **Haijie Yuan**: `hy2786@nyu.edu`
+* **Prof. Saiprasad Ravishankar**: `ravisha3@msu.edu`
