@@ -27,6 +27,7 @@ Our approach introduces a **Self-Guidance** mechanism that utilizes the model's 
  ┣ 📂 utils              # Utility functions (Dataloaders, Metrics, Visualization)
  ┣ 📂 data               # (Place your dataset files here)
  ┣ 📜 self_guided_DIP_demo.ipynb  # Main entry point: Jupyter Notebook for training/testing
+ ┣ 📜 two_channel_dataset_DIP_github_demo.ipynb  # Handles MRI k-space data loading, VDRS mask generation, and data preprocessing.
  ┗ 📜 requirements.txt   # Python dependencies
 ```
 
