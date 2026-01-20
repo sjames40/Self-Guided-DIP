@@ -62,7 +62,7 @@ def make_vdrs_mask(N1,N2,nlines,init_lines,seed=0):
     return mask_vdrs
 
 # --- Configuration and Data Loading ---
-Kspace_data_name = './NEW_KSPACE' # This is the path to the kspace data
+Kspace_data_name = './data/NEW_KSPACE' # This is the path to the kspace data
 kspace_array = os.listdir(Kspace_data_name)
 kspace_array = sorted(kspace_array)
 
