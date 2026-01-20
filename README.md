@@ -56,7 +56,7 @@ To reproduce the results, please download the specific k-space datasets used in 
 
 1.  **Dataset**:  
     - [**fastMRI Dataset website**](https://fastmri.med.nyu.edu/)(Download will take some time)
-    - [**Stanford 2D FSE website**](http://mridata.org/list?project=Stanford%202D%20FSE)
+    - [**Stanford 2D FSE website**](http://mridata.org/list?project=Stanford%202D%20FSE)(or download our copy via [**Google Drive**](https://drive.google.com/drive/folders/1CEI3SH2Amw1wRlQJygeWj1r1TI4jAOjm?usp=sharing))
 
 3.  **Setup**:  
     Download the fastMRI dataset and place the contents into the project directory (e.g., inside a folder named `data` or as specified in the notebook).
