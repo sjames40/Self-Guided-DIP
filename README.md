@@ -55,8 +55,8 @@ pip install -r requirements.txt
 To reproduce the results, please download the specific k-space datasets used in our experiments.
 
 1.  **Dataset**:  
-    - [**fastMRI Dataset website**](https://fastmri.med.nyu.edu/)(Download will take some time)
-    - [**Stanford 2D FSE website**](http://mridata.org/list?project=Stanford%202D%20FSE)(or download our copy via [**Google Drive**](https://drive.google.com/drive/folders/1CEI3SH2Amw1wRlQJygeWj1r1TI4jAOjm?usp=sharing))
+    - [**fastMRI Dataset website**] (https://fastmri.med.nyu.edu/)(Download will take some time)
+    - [**Stanford 2D FSE website**] (http://mridata.org/list?project=Stanford%202D%20FSE)(or download our copy via [**Google Drive**](https://drive.google.com/drive/folders/1CEI3SH2Amw1wRlQJygeWj1r1TI4jAOjm?usp=sharing))
 
 3.  **Setup**:  
     We **recommend** downloading the **fastMRI dataset** first, as it is the primary dataset used to generate the results in `self_guided_DIP_demo.ipynb`. 
